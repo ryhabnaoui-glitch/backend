@@ -1,0 +1,114 @@
+2025-05-30 02:28:50,852 - EnhancedEthereumHandler - WARNING - Connection attempt 1 failed: Failed to connect to Ethereum node at http://host.docker.internal:7545
+2025-05-30 02:28:52,865 - EnhancedEthereumHandler - WARNING - Connection attempt 2 failed: Failed to connect to Ethereum node at http://host.docker.internal:7545
+2025-05-30 02:28:54,883 - EnhancedEthereumHandler - CRITICAL - Failed to connect after 3 attempts
+2025-05-30 02:49:41,740 - EnhancedEthereumHandler - WARNING - Connection attempt 1 failed: Failed to connect to Ethereum node at http://host.docker.internal:7545
+2025-05-30 02:49:43,772 - EnhancedEthereumHandler - WARNING - Connection attempt 2 failed: Failed to connect to Ethereum node at http://host.docker.internal:7545
+2025-05-30 02:49:45,797 - EnhancedEthereumHandler - CRITICAL - Failed to connect after 3 attempts
+2025-05-30 02:53:09,721 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 02:53:09,799 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 14:18:35,782 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 14:18:35,847 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 14:57:30,700 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 14:57:30,727 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 18:37:58,046 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 18:37:58,076 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 21:11:00,643 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 21:11:00,662 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 21:29:04,846 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 21:29:04,879 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 21:55:12,738 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 21:55:12,783 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 21:56:54,220 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 21:56:54,232 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 21:58:16,831 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 21:58:16,843 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 22:46:03,691 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 22:46:03,714 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 22:47:39,733 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 22:47:39,746 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 22:51:49,227 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 22:51:49,247 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 22:59:21,097 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 22:59:21,113 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 23:24:55,369 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 23:24:55,393 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 23:25:04,000 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 23:25:04,026 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 23:25:12,523 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 23:25:12,535 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 23:44:06,403 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 23:44:06,419 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-30 23:45:56,132 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-30 23:45:56,143 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 00:43:43,771 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 00:43:43,786 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 02:36:56,582 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 02:36:56,604 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 18:09:20,902 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 18:09:20,920 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 18:13:46,359 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 18:13:46,369 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 19:05:23,285 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 19:05:23,306 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 19:21:48,910 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 19:21:48,920 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 19:21:56,137 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 19:21:56,145 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 19:52:17,518 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 19:52:17,535 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 19:54:22,993 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 19:54:23,003 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-05-31 20:40:43,671 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-05-31 20:40:43,692 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-01 09:42:14,811 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-01 09:42:14,947 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-02 18:56:23,368 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-02 18:56:23,406 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-02 19:43:16,510 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-02 19:43:16,548 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-02 22:07:01,472 - EnhancedEthereumHandler - WARNING - Connection attempt 1 failed: Failed to connect to Ethereum node at http://host.docker.internal:8545
+2025-06-02 22:07:03,565 - EnhancedEthereumHandler - WARNING - Connection attempt 2 failed: Failed to connect to Ethereum node at http://host.docker.internal:8545
+2025-06-02 22:07:05,576 - EnhancedEthereumHandler - CRITICAL - Failed to connect after 3 attempts
+2025-06-02 22:08:07,307 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-02 22:08:07,352 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 01:26:24,458 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 01:26:24,485 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:11:49,356 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:11:49,385 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:21:50,184 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:21:50,205 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:26:58,103 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:26:58,114 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:27:30,202 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:27:30,241 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:33:24,646 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:33:24,669 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 02:36:53,488 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 02:36:53,512 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 12:53:52,009 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 12:53:52,041 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 12:54:59,386 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 12:54:59,406 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 12:56:58,891 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 12:56:58,914 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 13:00:15,993 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 13:00:16,017 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-03 13:00:30,071 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-03 13:00:30,093 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-06 18:43:27,992 - EnhancedEthereumHandler - WARNING - Connection attempt 1 failed: Failed to connect to Ethereum node at http://host.docker.internal:8545
+2025-06-06 18:43:30,004 - EnhancedEthereumHandler - WARNING - Connection attempt 2 failed: Failed to connect to Ethereum node at http://host.docker.internal:8545
+2025-06-06 18:43:32,015 - EnhancedEthereumHandler - CRITICAL - Failed to connect after 3 attempts
+2025-06-06 18:46:16,149 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-06 18:46:16,180 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-06 18:54:43,456 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-06 18:54:43,466 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-07 00:30:50,109 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-07 00:30:50,123 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-07 00:33:27,699 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-07 00:33:27,708 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-07 00:40:38,179 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-07 00:40:38,194 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-07 00:45:13,033 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-07 00:45:13,044 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890
+2025-06-07 00:45:59,099 - EnhancedEthereumHandler - INFO - Successfully connected to Ethereum network (Chain ID: 1337)
+2025-06-07 00:45:59,106 - EnhancedEthereumHandler - INFO - Successfully loaded contract at 0x1234567890123456789012345678901234567890

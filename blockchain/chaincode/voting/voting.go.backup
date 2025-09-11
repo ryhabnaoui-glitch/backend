@@ -1,0 +1,107 @@
+package main
+
+import (
+    "encoding/json"
+    "fmt"
+
+    "github.com/hyperledger/fabric-contract-api-go/contractapi"
+)
+
+type SmartContract struct {
+    contractapi.Contract
+}
+
+type Vote struct {
+    ElectionID  string `json:"electionId"`
+    CandidateID string `json:"candidateId"`
+    VoterID     string `json:"voterId"`
+    Timestamp   string `json:"timestamp"`
+}
+
+func (s *SmartContract) CastVote(ctx contractapi.TransactionContextInterface, electionId string, candidateId string, voterId string, timestamp string) error {
+    voteKey := fmt.Sprintf("vote_%s_%s", electionId, voterId)
+    existing, err := ctx.GetStub().GetState(voteKey)
+    if err != nil {
+        return fmt.Errorf("failed to read from world state: %v", err)
+    }
+    if existing != nil {
+        return fmt.Errorf("voter has already voted")
+    }
+
+    vote := Vote{
+        ElectionID:  electionId,
+        CandidateID: candidateId,
+        VoterID:     voterId,
+        Timestamp:   timestamp,
+    }
+
+    voteJSON, err := json.Marshal(vote)
+    if err != nil {
+        return err
+    }
+
+    return ctx.GetStub().PutState(voteKey, voteJSON)
+}
+
+func (s *SmartContract) HasVoted(ctx contractapi.TransactionContextInterface, electionId string, voterId string) (bool, error) {
+    voteKey := fmt.Sprintf("vote_%s_%s", electionId, voterId)
+    existing, err := ctx.GetStub().GetState(voteKey)
+    if err != nil {
+        return false, err
+    }
+    return existing != nil, nil
+}
+
+func (s *SmartContract) GetResults(ctx contractapi.TransactionContextInterface, electionId string) (string, error) {
+    iterator, err := ctx.GetStub().GetStateByRange("vote_"+electionId+"_", "vote_"+electionId+"_~")
+    if err != nil {
+        return "", err
+    }
+    defer iterator.Close()
+
+    results := make(map[string]int)
+    totalVotes := 0
+
+    for iterator.HasNext() {
+        response, err := iterator.Next()
+        if err != nil {
+            return "", err
+        }
+
+        var vote Vote
+        err = json.Unmarshal(response.Value, &vote)
+        if err == nil {
+            results[vote.CandidateID]++
+            totalVotes++
+        }
+    }
+
+    resultData := map[string]interface{}{
+        "candidates": []map[string]interface{}{},
+        "totalVotes": totalVotes,
+    }
+
+    for candidateId, votes := range results {
+        candidate := map[string]interface{}{
+            "id":    candidateId,
+            "name":  "Candidate " + candidateId,
+            "votes": votes,
+        }
+        resultData["candidates"] = append(resultData["candidates"].([]map[string]interface{}), candidate)
+    }
+
+    resultJSON, err := json.Marshal(resultData)
+    return string(resultJSON), err
+}
+
+func main() {
+    chaincode, err := contractapi.NewChaincode(&SmartContract{})
+    if err != nil {
+        fmt.Printf("Error creating chaincode: %v", err)
+        return
+    }
+
+    if err := chaincode.Start(); err != nil {
+        fmt.Printf("Error starting chaincode: %v", err)
+    }
+}

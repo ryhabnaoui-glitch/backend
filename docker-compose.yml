@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "0.0.0.0:8001:8000"
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./blockchain/contracts:/app/blockchain/contracts
+      - ./blockchain/build:/app/blockchain/build
+      - ~/hyperledger-fabric/fabric-samples:/opt/fabric-samples
+      - ~/hyperledger-fabric/fabric-samples/test-network/organizations:/opt/organizations
+      - ~/hyperledger-fabric/fabric-samples/bin:/opt/hyperledger-fabric-bin
+    command: bash -c "
+      echo 'Starting Django application...' &&
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - .env
+    environment:
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_LOCALMSPID=Org1MSP
+      - CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+      - ORDERER_ADDRESS=orderer.example.com:7050
+      - CORE_PEER_TLS_ROOTCERT_FILE=/opt/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+      - ORDERER_TLS_ROOTCERT_FILE=/opt/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+      - CHANNEL_NAME=mychannel
+      - CHAINCODE_NAME=voting
+      - FABRIC_NETWORK_PATH=/opt/fabric-samples/test-network
+      - FABRIC_CFG_PATH=/opt/fabric-config
+      - CORE_PEER_MSPCONFIGPATH=/opt/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+      - PATH=/opt/hyperledger-fabric-bin:${PATH}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend_internal
+      - fabric_test
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: ${DB_USER:-voting_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-voting_password}
+      POSTGRES_DB: ${DB_NAME:-voting_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-voting_user} -d ${DB_NAME:-voting_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend_internal
+
+  ipfs:
+    image: ipfs/kubo:latest
+    ports:
+      - "0.0.0.0:4001:4001"
+      - "0.0.0.0:5001:5001"
+      - "0.0.0.0:8080:8080"
+    volumes:
+      - ipfs_data:/data/ipfs
+    networks:
+      - backend_internal
+
+  ganache:
+    image: trufflesuite/ganache-cli:v6.12.2
+    ports:
+      - "0.0.0.0:8545:8545"
+    command: >
+      ganache-cli
+      --host 0.0.0.0
+      --port 8545
+      --accounts 50
+      --defaultBalanceEther 1000
+      --mnemonic "vote chain blockchain election system demo test network development environment"
+      --networkId 1337
+      --gasLimit 10000000
+      --gasPrice 1000000000
+      --verbose
+      --deterministic
+    networks:
+      - backend_internal
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  ipfs_data:
+
+networks:
+  backend_internal:
+    driver: bridge
+  fabric_test:
+    external: true
+    name: fabric_test
