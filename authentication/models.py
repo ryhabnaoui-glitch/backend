@@ -1,7 +1,7 @@
 # authentication/models.py - COMPLETE WITH HYBRID ELECTION TYPES
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
+// hado les models ta3 base donnée
 class Election(models.Model):
     # HYBRID APPROACH: Predefined choices + custom option
     ELECTION_TYPES = [
