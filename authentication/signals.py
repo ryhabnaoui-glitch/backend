@@ -2,7 +2,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
-
+// signals bach tcreer tokens lel login w registrations w api requests
 User = get_user_model()
 
 @receiver(post_save, sender=User)
