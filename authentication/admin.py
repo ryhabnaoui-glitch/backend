@@ -1,4 +1,12 @@
 # authentication/admin.py - UPDATED WITH ELECTION MANAGEMENT
+
+
+// hadi rani nekhdam biha just pour admin configuration fel url /admin/ par exemple rani dayretha just bach nchof fel url les models 
+// et tous avec des options rechercher filter ...etc 
+
+
+
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User, Election, Candidate, Vote, ContractDeployment
